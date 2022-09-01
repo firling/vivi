@@ -103,7 +103,7 @@ function Step2() {
                     <Text>
                         Je te demande maintenant d'aller te balader en 
                         <a href="https://www.google.com/maps/@48.1115124,-1.6842055,3a,75y,268.61h,86.04t/data=!3m6!1e1!3m4!1s1fi3ZRfHEJcDvj2hp1unUg!2e0!7i13312!8i6656" target="_blank"> Street View </a> 
-                        à ces coordonnées précédemment trouvée et de trouver le mot caché ci-dessous : 
+                        à ces coordonnées et de trouver le mot caché ci-dessous : 
                     </Text>
                     <Text size="xs">(Tu n'as normalement pas besoin de bouger)</Text>
 
