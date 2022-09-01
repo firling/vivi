@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Navigate } from 'react-router-dom';
 
 import { createStyles, Title, Text, Grid, Paper, Code, Input, Button } from "@mantine/core";
+import { showNotification } from '@mantine/notifications';
 
 const useStyles = createStyles((theme) => ({
     invalid: {
@@ -54,11 +55,17 @@ function Step1() {
     }
 
     const checkValidation = () => {
-        if (part1 && part2) setRedirect(true);
+        if (part1 && part2) return setRedirect(true);
+        
+        showNotification({
+            color: 'red',
+            title: 'Kestufé',
+            message: 'Tu vois bien qu\'il y a toujours une erreur là quand même oh',
+        })
     }
 
     return (
-        <>
+        <Paper shadow="sm" radius="lg" p="xl" withBorder>
             <Title order={1}>Etape 1</Title>
 
             <Text size="lg" mt="xl">La première étape est séparé en deux parties distinctes :</Text>
@@ -109,7 +116,7 @@ function Step1() {
             >
                 VALIDATION
             </Button>
-        </>
+        </Paper>
     )
 }
 
