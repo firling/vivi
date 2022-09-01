@@ -96,9 +96,9 @@ function Step1() {
                         <Title order={5}>Deuxièmement</Title>
                         <Text size="sm" mt="sm">Décode moi ce texte : </Text>
                         <Code>
-                            bea5ccb3bb7def9f260a035b369f189e
+                            LTEuNjg0Mjg0
                         </Code>
-                        <Text size="xs">Voici un petit <a href="https://fr.wikipedia.org/wiki/MD5" target="_blank">lien</a> pour t'aider</Text>
+                        <Text size="xs">Voici un petit <a href="https://fr.wikipedia.org/wiki/Base64" target="_blank">lien</a> pour t'aider</Text>
                         <Input
                             ref={part2Ref} 
                             mt="md"
