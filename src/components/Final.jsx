@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 
-import { useInterval } from '@mantine/hooks';
-
 import { createStyles, keyframes, Loader, Progress, Title, Text } from "@mantine/core";
 
 const bounce = keyframes({
@@ -32,29 +30,25 @@ function Final() {
 
     const { classes } = useStyles();
 
-    const interval = useInterval(
-      () =>
-        setProgress((current) => {
-
-            current === 20 && setProgressText("c'est long hein ?")
-            current === 50 && setProgressText("ouais j'me suis cassé le cul je sais")
-            current === 70 && setProgressText("encore un peu ......")
-            current === 90 && setProgressText("ça y est ??")
-
-            if (current < 100) {
-                return current + 1;
-            }
-    
-            interval.stop();
-            setLoaded(true);
-            return 100;
-        }),
-      125
-    );
-
     useEffect(() => {
-        interval.start();
-        return interval.stop();
+        const interval = setInterval(() =>
+            setProgress((current) => {
+
+                current === 20 && setProgressText("c'est long hein ?")
+                current === 50 && setProgressText("ouais j'me suis cassé le cul je sais")
+                current === 70 && setProgressText("encore un peu ......")
+                current === 90 && setProgressText("ça y est ??")
+
+                if (current < 100) {
+                    return current + 1;
+                }
+        
+                clearInterval(interval);
+                setLoaded(true);
+                return 100;
+            }), 125);
+
+        return () => clearInterval(interval);
     }, []);
 
     if (!loaded) {
