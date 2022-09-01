@@ -32,7 +32,7 @@ const useStyles = createStyles((theme) => ({
 function Step2() {
     const [redirect, setRedirect] = useState(false);
     const [loading, setLoding] = useState(false);
-    const [buttonDone, setButtonDone] = useState(true);
+    const [buttonDone, setButtonDone] = useState(false);
     const [invalid, setInvalid] = useState(false);
     
     const lastPartRef = useRef("");
