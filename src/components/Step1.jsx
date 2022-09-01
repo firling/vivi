@@ -68,7 +68,7 @@ function Step1() {
         <Paper shadow="sm" radius="lg" p="xl" withBorder>
             <Title order={1}>Etape 1</Title>
 
-            <Text size="lg" mt="xl">La première étape est séparé en deux parties distinctes :</Text>
+            <Text size="lg" mt="xl">La première étape est séparée en deux parties distinctes :</Text>
             
             <Grid mt="xl">
                 <Grid.Col md={12} lg={6}>

@@ -75,7 +75,7 @@ function Final() {
 
             <Text size="lg" mt="xl">Tu as trouvé le mot caché WOUHOU</Text>
 
-            <Text size="lg" mt="xl">Je t'invite donc maintenant a regarder tes mails</Text>
+            <Text size="lg" mt="xl">Je t'invite donc maintenant à regarder tes mails</Text>
         </div>
     )
 }
