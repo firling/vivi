@@ -53,7 +53,7 @@ function Final() {
 
     if (!loaded) {
         return (
-            <div style={{width: '600px'}}>
+            <div style={{width: '50vw'}}>
                 <Loader />
                 <Progress value={progress} label={`${progress}%`} size="xl" radius="xl" style={{width: '100%'}}/>
                 <Text size="md" mt="xs">{progressText}</Text>
