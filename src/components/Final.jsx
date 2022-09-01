@@ -41,14 +41,12 @@ function Final() {
             current === 70 && setProgressText("encore un peu ......")
             current === 90 && setProgressText("ça y est ??")
 
-
-
             if (current < 100) {
                 return current + 1;
             }
     
             interval.stop();
-              setLoaded(true);
+            setLoaded(true);
             return 100;
         }),
       125
