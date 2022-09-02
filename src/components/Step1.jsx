@@ -65,7 +65,7 @@ function Step1() {
     }
 
     return (
-        <Paper shadow="sm" radius="lg" p="xl" withBorder>
+        <Paper style={{width: '600px'}} shadow="sm" radius="lg" p="xl" withBorder>
             <Title order={1}>Etape 1</Title>
 
             <Text size="lg" mt="xl">La première étape est séparée en deux parties distinctes :</Text>

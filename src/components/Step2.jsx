@@ -77,7 +77,7 @@ function Step2() {
     }
 
     return (
-        <Paper shadow="sm" radius="lg" p="xl" withBorder>
+        <Paper style={{width: '600px'}} shadow="sm" radius="lg" p="xl" withBorder>
             <Title order={1}>Etape 2</Title>
 
             <Text size="lg" mt="xl">Voici le résultat de l'étape dernière : </Text>
