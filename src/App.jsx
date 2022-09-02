@@ -15,8 +15,17 @@ import Step2 from './components/Step2';
 import Final from './components/Final';
 
 const useStyles = createStyles((theme, _params, getRef) => ({
-  container: {
-
+  main: {
+    width: '30vw',
+    [`@media (max-width: ${theme.breakpoints.xl}px)`]: {
+      width: '50vw',
+    },
+    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+      width: '70vw',
+    },
+    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+      width: '90vw',
+    },
   }
 }));
 
@@ -26,9 +35,9 @@ function App() {
     <NotificationsProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/step1" element={<Step1 />} />
-          <Route path="/step2" element={<Step2 />} />
+          <Route path="/" element={<Home main={classes.main} />} />
+          <Route path="/step1" element={<Step1 main={classes.main} />} />
+          <Route path="/step2" element={<Step2 main={classes.main} />} />
           <Route path="/final" element={<Final />} />
         </Routes>
       </BrowserRouter>

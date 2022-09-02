@@ -19,7 +19,7 @@ const useStyles = createStyles((theme) => ({
       }
   }))
 
-function Step1() {
+function Step1({ main }) {
     const [redirect, setRedirect] = useState(false);
     const part1Ref = useRef("");
     const [part1, setPart1] = useState(null);
@@ -65,7 +65,7 @@ function Step1() {
     }
 
     return (
-        <Paper style={{width: '600px'}} shadow="sm" radius="lg" p="xl" withBorder>
+        <Paper className={main} shadow="sm" radius="lg" p="xl" withBorder>
             <Title order={1}>Etape 1</Title>
 
             <Text size="lg" mt="xl">La première étape est séparée en deux parties distinctes :</Text>

@@ -29,7 +29,7 @@ const useStyles = createStyles((theme) => ({
     },
   }));
 
-function Step2() {
+function Step2({ main }) {
     const [redirect, setRedirect] = useState(false);
     const [loading, setLoding] = useState(false);
     const [buttonDone, setButtonDone] = useState(false);
@@ -77,7 +77,7 @@ function Step2() {
     }
 
     return (
-        <Paper style={{width: '600px'}} shadow="sm" radius="lg" p="xl" withBorder>
+        <Paper className={main} shadow="sm" radius="lg" p="xl" withBorder>
             <Title order={1}>Etape 2</Title>
 
             <Text size="lg" mt="xl">Voici le résultat de l'étape dernière : </Text>

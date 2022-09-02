@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 
 import { Paper, Title, Text, Button } from "@mantine/core";
 
-function Home() {
+function Home({ main }) {
     const [redirect, setRedirect] = useState(false);
     
     if(redirect) {
@@ -11,7 +11,7 @@ function Home() {
     }
 
     return (
-        <Paper shadow="sm" radius="lg" p="xl" withBorder>
+        <Paper className={main} shadow="sm" radius="lg" p="xl" withBorder>
             <Title order={1}>Bienvenue sur ton site vivi</Title>
             <Text size="xs">(il est un peu nul mais c'est pas grave)</Text>
 
