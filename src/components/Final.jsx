@@ -51,25 +51,6 @@ function Final() {
     );
 
     useEffect(() => {
-        // const interval = setInterval(() =>
-        //     setProgress((current) => {
-
-        //         current === 20 && setProgressText("c'est long hein ?")
-        //         current === 50 && setProgressText("ouais j'me suis cassé le cul je sais")
-        //         current === 70 && setProgressText("encore un peu ......")
-        //         current === 90 && setProgressText("ça y est ??")
-
-        //         if (current < 100) {
-        //             return current + 1;
-        //         }
-        
-        //         clearInterval(interval);
-        //         setLoaded(true);
-        //         return 100;
-        //     }), 125);
-
-        // return () => clearInterval(interval);
-
         interval.start();
         return interval.stop;
     }, []);
